@@ -172,6 +172,8 @@ async def on_ready(): #This happens when it connects to discord
     global runcheck_task
     runcheck_task = bot.loop.create_task(runcheck())
 
+#This task runs every 5 seconds and checks if the bot is down. If it is it will remove the file runcheck.pickle
+#The side script runchecker.py will then attempt to restart the bot
 async def runcheck():
     await bot.wait_until_ready()
     while not bot.is_closed:
@@ -9126,4 +9128,4 @@ async def AIduel(dueltag):
 ############################################################################################################
 
 
-bot.run('NTgzNjY4NDkxMDQzODY0NTc2.XO_t1w.L_RRie7gmgI48gCIZrwt0PrAIW0')
+bot.run('TOKEN FOR YOUR DISCORD BOT')
