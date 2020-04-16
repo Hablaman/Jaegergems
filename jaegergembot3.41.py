@@ -6487,30 +6487,6 @@ async def pause(ctx): #Pause user commands.
 ############################################################################################################
 ############################################################################################################
 ############################################################################################################
-
-
-@bot.command(pass_context = True)
-async def gbreak(ctx):
-    user = ctx.message.author
-    userid = user.id
-    index = findTeam(userid)
-    tagged, tagcommand = findTag(user)
-    if not gamepause:
-        if not tagged:
-            if index == -1:
-                await bot.whisper('You do not have a team yet, create one with ``!start``.')
-            elif ctx.message.channel.is_private:
-                await bot.whisper('Duel commands can only be used on the Jaegergems server.')
-            else:
-                duelindex = memfindDueltag(TeamList[index].dueltag)
-                if duelindex == -1:
-                    await bot.whisper('You are currently not in a duel.')
-                else:
-                    DM = DuelmemList[duelindex]
-                    [owner, notowner] = memfindTeam(userid, TeamList[index].dueltag)
-                    DM.duelists[owner].g1.guard = 0
-                    DM.duelists[notowner].g1.guard = 0
-                    print('BBBBBBBBBBBBBRRRRRRRRRRRRRRREEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAKKKKKKKKKKk')
                     
                     
 @bot.command(pass_context = True)
