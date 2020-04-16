@@ -9150,4 +9150,4 @@ async def AIduel(dueltag):
 ############################################################################################################
 
 
-bot.run('NTgzNjY4NDkxMDQzODY0NTc2.Xph8-g.pvrTRZDlWfVCJICfpdBBYfeNlZ4')
+bot.run('BOT TOKEN HERE')
